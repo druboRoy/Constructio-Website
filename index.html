@@ -6,14 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRB Ltd. | Home</title>
 
-    <!-- Tailwind and DaisyUI CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/030cca06e6.js" crossorigin="anonymous"></script>
+
+    <!-- Custom Color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary': '#abef5f',
+                        'sec': '#212121',
+                        'tert': '#737373',
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         .manrope {
@@ -24,8 +42,30 @@
     </style>
 </head>
 
-<body>
-    <header></header>
+<body class="manrope">
+    <header class="lg:mt-14 lg:mx-30 md:mx-15 mx-6 mt-6">
+        <nav class="flex justify-between">
+            <div class="flex justify-center gap-1 items-center">
+                <i class="fa-solid bg-primary p-2 rounded-[100%] fa-arrow-right rotate-[-45deg]"></i>
+                <h3 class="text-3xl font-extrabold text-sec">Rinterio</h3>
+            </div>
+            <div class="hidden lg:flex items-center">
+                <a class="mr-9 text-sec hover:text-tert" href="#">Home</a>
+                <a class="mr-9 text-sec hover:text-tert" href="#">Services</a>
+                <a class="mr-9 text-sec hover:text-tert" href="#">Portfolio</a>
+                <a class="mr-9 text-sec hover:text-tert" href="#">Blog</a>
+                <a class="text-sec hover:text-tert" href="#">Contact Us</a>
+            </div>
+            <div class="flex justify-center items-center gap-9">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="flex bg-primary justify-center items-center gap-2 px-6 py-2 rounded-[32px]">
+                    <h3 class="text-xl font-extrabold text-sec">Book Consult</h3>
+                    <i class="fa-solid fa-arrow-right p-1 rounded-[100%] bg-sec text-primary rotate-[-45deg]"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main></main>
     <footer></footer>
 
